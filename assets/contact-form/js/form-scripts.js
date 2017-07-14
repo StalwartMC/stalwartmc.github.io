@@ -19,7 +19,7 @@ function submitForm(){
 
     $.ajax({
         type: "POST",
-        url: "http://formspree.io/sstevenson@stalwartmc.com",
+        url: "https://formspree.io/sstevenson@stalwartmc.com",
         data: "name=" + name + "&email=" + email + "&message=" + message,
         success : function(text){
             if (text == "success"){
