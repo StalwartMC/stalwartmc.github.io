@@ -1,0 +1,92 @@
+/*
+  SCRN Minimal version
+*/
+
+
+a {
+  color: #2c2c2c;
+}
+
+.btn-default {
+  background: #fff;
+  color: #2c2c2c;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 2px;
+  border: 1px solid #2c2c2c;
+  padding: 10px 30px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-2 {
+  background: #39add1;
+  color: #fff;
+}
+
+.btn-3 {
+  background: #fff;
+  color: #2c2c2c;
+}
+
+.call-to-action {
+  background: #fff;
+}
+
+#intro {
+  background-image: url(../images/intro-bg-2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#intro h1, #intro p {
+  color: #2c2c2c;
+}
+
+nav.navbar {
+  background: #fff;
+  border-bottom: 1px solid #777;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#services,
+#contact {
+  background: #fff;
+}
+
+#services p, #services h2, #services h4, #services h5, #services label,
+  #contact p,
+  #contact h2,
+  #contact h4,
+  #contact h5,
+  #contact label {
+  color: #2c2c2c;
+}
+
+.services-icon {
+  background: #f0f2f2;
+  color: #a4a4a4;
+}
+
+.pricing-table {
+  background-color: #fff;
+  color: #2c2c2c;
+  -webkit-box-shadow: 0 0 0 2px #2c2c2c;
+  box-shadow: 0 0 0 2px #2c2c2c;
+}
+
+.pricing-table p,
+  .pricing-table li {
+  color: #2c2c2c;
+}
+
+.skill-bar {
+  background: #e7e9e9;
+}
+
+#contact .form-control {
+  background-color: #fff;
+  border: 1px solid #2c2c2c;
+}

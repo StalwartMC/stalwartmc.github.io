@@ -1,0 +1,132 @@
+#contact h2, #services h2,
+#contact p, #services p,
+#contact h5, #services h5,
+#our-values h2, #our-values p, #our-values h5{
+	color:white;
+}
+.intro-content .big-h1{
+	text-indent: -99999px;
+	background-image: url(../images/stalwartmc-logo.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	width:100%;
+	height:112px;
+	display:block;
+}
+
+.intro-content h1{
+	line-height: 50px;
+}
+
+nav.navbar {
+	background-color:#ca5609;
+	color:white;
+}
+nav.navbar .container{
+}
+.nav > li > a {
+	color:white;
+	padding: 25px;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+	background-color: #bc4f07;
+}
+
+section#contact {
+	padding:0;
+	background-size: cover;
+	width: 100%;
+	height: 500px;
+	position: relative;
+	z-index: 9;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+#contact{
+	background:none;
+}
+
+.tint{
+	background-color:rgba(0,0,0,.7);
+}
+#work-container .col-md-4{
+	height:520px;
+}
+
+.services-list .sicon{
+	    height: 94px;
+    width: 94px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -14px;
+    left: 16px;
+}
+
+.services-list .compus .sicon {
+	left: 18px;
+    top: -13px;
+}
+
+.services-icon {
+	background:#ffffff;
+}
+
+section#leadership{
+	background:#7299a8;
+	padding:0 0 40px 0;
+}
+section#leadership h1,
+section#leadership h2,
+section#leadership h4,
+
+section#leadership p {
+	color: white;
+}
+section header h2:after {
+	background-color: black;
+}
+section#leadership h2:after,
+#our-values h2:after,
+{
+	background-color:white;
+}
+section#services ul,
+#our-values ul {
+	list-style: none;
+	margin-left: 40px;
+}
+section#services ul li,
+#our-values ul li {
+	color:white;
+	background-image: url(../images/arrow.png);
+	text-align: left;
+	background-repeat: no-repeat;
+	background-position: left 5px;
+	padding-left:15px;
+	padding-bottom:5px;
+}
+#our-values ul li{
+	background-position: left center;
+}
+#our-values,#our-story{
+	padding: 30px 150px;
+
+}
+#our-values{
+	background: #2c2c2c;
+    padding-bottom: 150px !important;
+        padding-left: 50px;
+}
+#our-values ul{
+	margin-left: 30px;
+	padding: 0;
+}
+#our-values ul li {
+	font-size: 230%;
+}
+#our-story{
+	    padding-right: 50px;
+}
+
