@@ -22,14 +22,13 @@ function submitForm(){
         method: "POST",
         url: "https://formspree.io/sstevenson@stalwartmc.com",
         dataType: "json",
-        data: {name: name, _replyto: email, message: message, _gotcha: gotcha},
-        success : function(text){
-            if (text == "success"){
-                formSuccess();
-            } else {
-                formError();
-                submitMSG(false,text);
-            }
+        data: {name: name, _replyto: email, message: message, _gotcha: gotcha, _subject: "Stalwartmc.com contact form"},
+        success : function(data, status, jq){
+            formSuccess();
+        },
+        error: function(jq, status, error) {
+            formError();
+            submitMSG(false,error);
         }
     });
 }
