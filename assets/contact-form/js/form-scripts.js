@@ -16,11 +16,13 @@ function submitForm(){
     var name = $("#name").val();
     var email = $("#email").val();
     var message = $("#message").val();
+    var gotcha = $("#gotcha").val();
 
     $.ajax({
-        type: "POST",
+        method: "POST",
         url: "https://formspree.io/barmenta@stalwartmc.com",
-        data: "name=" + name + "&email=" + email + "&message=" + message,
+        dataType: "json",
+        data: {name: name, _replyto: email, message: message, _gotcha: gotcha},
         success : function(text){
             if (text == "success"){
                 formSuccess();
