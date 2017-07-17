@@ -20,7 +20,7 @@ function submitForm(){
 
     $.ajax({
         method: "POST",
-        url: "https://formspree.io/sstevenson@stalwartmc.com",
+        url: "https://formspree.io/barmenta@stalwartmc.com",
         dataType: "json",
         data: {name: name, _replyto: email, message: message, _gotcha: gotcha, _subject: "Stalwartmc.com contact form"},
         success : function(data, status, jq){
