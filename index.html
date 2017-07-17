@@ -380,7 +380,7 @@
 </section> <!-- end section -->
 
 <footer>
-  <p>&copy; 2016 STALWARTMC. All rights reserved</p>
+  <p>&copy; 2016-<span id=currentyear></span> STALWARTMC. All rights reserved</p>
 </footer>
 
 <script>
@@ -416,6 +416,7 @@ var ismobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.tes
 <script>
   $(window).load(function() {
     $('#slider').nivoSlider();
+    $('#currentyear').html((new Date()).getFullYear());
   });
 </script>
 
