@@ -111,11 +111,15 @@ section header p {
 }
 
 section#work,
-section#services,
+section#press,
 section#about,
 section#blog,
 section#contact {
   padding: 120px 0 100px 0;
+}
+
+section#services {
+  padding: 0 0 60px 0;
 }
 
 .call-to-action {
@@ -582,18 +586,12 @@ p.project-side-title {
  08. Services
 ******************************/
 
-#services {
-  padding-bottom: 150px !important;
-}
-
-
 #services header h2::after {
   background-color: #000;
 }
 
 .services-list {
   text-align: center;
-  margin-top: 110px;
 }
 
 .services-list h4 {
