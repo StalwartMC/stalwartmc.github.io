@@ -1,6 +1,6 @@
-#contact h2, #services h2,
-#contact p, #services p,
-#contact h5, #services h5,
+#contact h2,
+#contact p,
+#contact h5,
 #our-values h2, #our-values p, #our-values h5{
 	color:white;
 }
@@ -99,7 +99,6 @@ section#services ul,
 }
 section#services ul li,
 #our-values ul li {
-	color:white;
 	background-image: url(../images/arrow.png);
 	text-align: left;
 	background-repeat: no-repeat;
@@ -109,6 +108,7 @@ section#services ul li,
 }
 #our-values ul li{
 	background-position: left center;
+	color:white;
 }
 #our-values,#our-story{
 	padding: 30px 150px;
@@ -129,4 +129,3 @@ section#services ul li,
 #our-story{
 	    padding-right: 50px;
 }
-

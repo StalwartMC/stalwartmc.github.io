@@ -265,6 +265,20 @@ p.copyright {
   transform-style: preserve-3d;
 }
 
+#press-intro {
+  background-image: url(../images/intro-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 31vh;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
 #intro h1, #intro p {
   color: #fff;
 }
@@ -569,16 +583,12 @@ p.project-side-title {
 ******************************/
 
 #services {
-  background: #2c2c2c;
   padding-bottom: 150px !important;
 }
 
-#services h2, #services h4, #services p {
-  color: #c0bdbd;
-}
 
 #services header h2::after {
-  background-color: #c0bdbd;
+  background-color: #000;
 }
 
 .services-list {
@@ -1143,7 +1153,7 @@ footer p {
   }
 }
 
-#intro, #parallax-1, #parallax-2, #parallax-3, #parallax-4 {
+#press-intro, #intro, #parallax-1, #parallax-2, #parallax-3, #parallax-4 {
   background-attachment: scroll;
   background-position: center;
 }
