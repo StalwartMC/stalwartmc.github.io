@@ -2,7 +2,7 @@ google.maps.event.addDomListener(window, 'load', init);
 var map;
 function init() {
     var mapOptions = {
-        center: new google.maps.LatLng(29.7428417,-95.7784113),
+        center: new google.maps.LatLng(29.7422547,-95.5625998),
         zoom: 16,
         zoomControl: false,
         disableDoubleClickZoom: false,
@@ -22,7 +22,7 @@ function init() {
     var mapElement = document.getElementById('d');
     var map = new google.maps.Map(mapElement, mapOptions);
     var locations = [
-['StalwartMC', 'undefined', 'undefined', 'undefined', 'undefined', 29.7428417, -95.7784113, 'assets/images/default.png']
+['StalwartMC', 'undefined', 'undefined', 'undefined', 'undefined', 29.7422547, -95.5625998, 'assets/images/default.png']
     ];
     for (i = 0; i < locations.length; i++) {
       if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
