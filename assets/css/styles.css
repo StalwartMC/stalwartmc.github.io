@@ -229,6 +229,10 @@ p.copyright {
   -webkit-transform: translate(-50%, -50%);
 }
 
+.parallax p.not-middle {
+  top: 1em;
+}
+
 #parallax-1 {
   background: url(../images/parallax-bg-1.jpg) 50% 0 repeat fixed;
   background-size: cover;
