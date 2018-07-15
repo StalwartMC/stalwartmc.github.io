@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <style>
+    body {
+      background-color: whitesmoke;
+    }
+    </style>
+    <title>Application</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Application</h1>
+      <form>
+        <input type="hidden" id="applicant-name">
+        <input type="hidden" id="app-date">
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="applicant-given-name">First Name</label>
+            <input type="text" class="form-control name-field" id="applicant-given-name">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="applicant-middle-name">Middle Name</label>
+            <input type="text" class="form-control" id="applicant-middle-name">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="applicant-surname">Last Name</label>
+            <input type="text" class="form-control name-field" id="applicant-surname">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="applicant-email">Email</label>
+            <input type="email" class="form-control" id="applicant-email">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="ssn">Social Security Number</label>
+            <input type="number" class="form-control" id="ssn">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="birth-date">Birthdate</label>
+            <input type="date" class="form-control date-field" id="birth-date">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Street Address</label>
+          <input type="text" class="form-control" id="address">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="region">State</label>
+            <input type="text" class="form-control" id="region" maxlength="2">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="zip">Zip</label>
+            <input type="number" class="form-control" id="zip">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="home-phone">Home Phone</label>
+            <input type="text" class="form-control" id="home-phone">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="mobile-phone">Mobile Phone</label>
+            <input type="text" class="form-control" id="mobile-phone">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="UsrHowDidYouHearAboutUs">How did you hear about us?</label>
+            <select class="form-control" id="UsrHowDidYouHearAboutUs">
+              <option>chapter referral</option>
+              <option>friend or family</option>
+              <option>radio</option>
+              <option>website</option>
+              <option>other</option>
+            </select>
+          </div>
+          <div class="form-group col-md-9">
+            <label for="UsrReferralOtherExplanation">If "other", please explain</label>
+            <input type="text" class="form-control" id="UsrReferralOtherExplanation">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="UsrWhatBroughtYouToSeekHelp">What brought you to seek help?</label>
+          <textarea class="form-control" rows="3" id="UsrWhatBroughtYouToSeekHelp"></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="UsrMaritalStatus">Marital Status</label>
+            <select class="form-control" id="UsrMaritalStatus">
+              <option>divorced</option>
+              <option>married</option>
+              <option>separated</option>
+              <option>single</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="UsrAreYouCurrentlyEmployed">Are you currently employed?</label>
+            <select class="form-control" id="UsrAreYouCurrentlyEmployed">
+              <option>no</option>
+              <option>yes</option>
+            </select>
+          </div>
+        </div>
+
+        <h2>Service History</h2>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="UsrTotalNoDeployments">Total Number of Deployments</label>
+            <input type="number" class="form-control" id="UsrTotalNoDeployments">
+          </div>
+          <div class="form-group col-md-8">
+            <label for="UsrDischargeType">Discharge Type</label>
+            <select class="form-control" id="UsrDischargeType">
+              <option>dishonorable</option>
+              <option>honorable</option>
+              <option>other than honorable</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="UsrMOS">Military Occupation (MOS)</label>
+            <input type="text" class="form-control" id="UsrMOS">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="true" id="UsrArmyActive">
+              <label class="form-check-label" for="UsrArmyActive">
+                Army Active
+              </label>
+            </div>
+          </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="true" id="UsrArmyReserve">
+            <label class="form-check-label" for="UsrArmyReserve">
+              Army Reserve
+            </label>
+          </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="true" id="UsrNavyActive">
+            <label class="form-check-label" for="UsrNavyActive">
+              Navy Active
+            </label>
+          </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="true" id="UsrNavyReserve">
+            <label class="form-check-label" for="UsrNavyReserve">
+              Navy Reserve
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="true" id="UsrUSAFActive">
+              <label class="form-check-label" for="UsrUSAFActive">
+                USAF Active
+              </label>
+            </div>
+          </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="true" id="UsrUSAFReserve">
+            <label class="form-check-label" for="UsrUSAFReserve">
+              USAF Reserve
+            </label>
+          </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="true" id="UsrUSMCActive">
+            <label class="form-check-label" for="UsrUSMCActive">
+              USMC Active
+            </label>
+          </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="true" id="UsrUSMCReserve">
+            <label class="form-check-label" for="UsrUSMCReserve">
+              USMC Reserve
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="true" id="UsrArmyNG">
+              <label class="form-check-label" for="UsrArmyNG">
+                Army National Guard
+              </label>
+            </div>
+          </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="true" id="UsrAirNatlGuard">
+            <label class="form-check-label" for="UsrAirNatlGuard">
+              Air National Guard
+            </label>
+          </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="true" id="UsrCoastGuard">
+            <label class="form-check-label" for="UsrCoastGuard">
+              Coast Guard
+            </label>
+          </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="true" id="UsrCoastGuardReserve">
+            <label class="form-check-label" for="UsrCoastGuardReserve">
+              Coast Guard Reserve
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="true" id="UsrContractorService">
+              <label class="form-check-label" for="UsrContractorService">
+                Contractor Service
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <h2>Emergency Contact</h2>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="UsrEmergencyFirstName">First Name</label>
+            <input type="text" class="form-control" id="UsrEmergencyFirstName">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="UsrEmergencyLastName">Last Name</label>
+            <input type="text" class="form-control" id="UsrEmergencyLastName">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="UsrEmergencyPhone">Phone</label>
+            <input type="text" class="form-control" id="UsrEmergencyPhone">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="UsrEmergencyAlternatePhone">Alternate Phone</label>
+            <input type="text" class="form-control" id="UsrEmergencyAlternatePhone">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="UsrEmergencyStreet">Street Address</label>
+          <input type="text" class="form-control" id="UsrEmergencyStreet">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="UsrEmergencyCity">City</label>
+            <input type="text" class="form-control" id="UsrEmergencyCity">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="UsrEmergencyState">State</label>
+            <input type="text" class="form-control" id="UsrEmergencyState" maxlength="2">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="UsrEmergencyZip">Zip</label>
+            <input type="number" class="form-control" id="UsrEmergencyZip">
+          </div>
+        </div>
+
+
+
+      </form>
+      <button class="btn btn-primary">Submit</button>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
+    <script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
+    <script>
+    /**
+    * Replace the "css-selector" placeholders in the code below with the element selectors on your landing page.
+    * You can use #id or any other CSS selector that will define the input field explicitly.
+    * Example: "Email": "#MyEmailField".
+    * If you don't have a field from the list below placed on your landing, leave the placeholder or remove the line.
+    */
+    var config = {
+        fields: {
+            "GivenName": "#applicant-given-name", // Name of a visitor, submitting the page
+            "Surname": "#applicant-surname", // Name of a visitor, submitting the page
+            "MiddleName": "#applicant-middle-name",
+            "Address": "#address",
+            "City": "#city",
+            "Region": "#region",
+            "Zip": "#zip",
+            "MobilePhone": "#mobile-phone",
+            "Name": "#applicant-name", // Name of a visitor, submitting the page
+            "Email": "#applicant-email", // Visitor's email
+            "UsrHowDidYouHearAboutUs": "#UsrHowDidYouHearAboutUs",
+            "UsrReferralOtherExplanation": "#UsrReferralOtherExplanation",
+            "UsrWhatBroughtYouToSeekHelp": "#UsrWhatBroughtYouToSeekHelp",
+            "UsrMaritalStatus": "#UsrMaritalStatus",
+            "UsrTotalNoDeployments": "#UsrTotalNoDeployments",
+            "UsrDischargeType": "#UsrDischargeType",
+            "UsrMOS": "#UsrMOS",
+            "UsrArmyActive": "#UsrArmyActive",
+            "UsrArmyReserve": "#UsrArmyReserve",
+            "UsrNavyActive": "#UsrNavyActive",
+            "UsrNavyReserve": "#UsrNavyReserve",
+            "UsrUSAFActive": "#UsrUSAFActive",
+            "UsrUSAFReserve": "#UsrUSAFReserve",
+            "UsrUSMCActive": "#UsrUSMCActive",
+            "UsrUSMCReserve": "#UsrUSMCReserve",
+            "UsrArmyNG": "#UsrArmyNG",
+            "UsrAirNatlGuard": "#UsrAirNatlGuard",
+            "UsrCoastGuard": "#UsrCoastGuard",
+            "UsrCoastGuardReserve": "#UsrCoastGuardReserve",
+            "UsrContractorService": "#UsrContractorService",
+            "UsrAreYouCurrentlyEmployed": "#UsrAreYouCurrentlyEmployed",
+            "UsrEmergencyFirstName": "#UsrEmergencyFirstName",
+            "UsrEmergencyLastName": "#UsrEmergencyLastName",
+            "UsrEmergencyPhone": "#UsrEmergencyPhone",
+            "UsrEmergencyAlternatePhone": "#UsrEmergencyAlternatePhone",
+            "UsrEmergencyStreet": "#UsrEmergencyStreet",
+            "UsrEmergencyCity": "#UsrEmergencyCity",
+            "UsrEmergencyState": "#UsrEmergencyState",
+            "UsrEmergencyZip": "#UsrEmergencyZip",
+            "UsrAppDate": "#app-date",
+            "UsrSSN": "#ssn",
+            "BirthDate": "#birth-date",
+            "HomePhone": "#home-phone",
+
+        },
+        landingId: "921c136a-dcdc-493d-8ddc-2131d56d4156",
+        serviceUrl: "https://camphope.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+        redirectUrl: "https://stalwartmc.com/camphope/success.html"
+    };
+    /**
+    * The function below creates a object from the submitted data.
+    * Bind this function call to the "onSubmit" event of the form or any other elements events.
+    * Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
+    */
+    function createObject() {
+        landing.createObjectFromLanding(config)
+    }
+    /**
+    * The function below inits landing page using URL parameters.
+    */
+    function initLanding() {
+        landing.initLanding(config)
+        document.getElementById('app-date').value = new Date().toISOString();
+    }
+    jQuery(document).ready(initLanding)
+    $('button').on('click', function() {
+      createObject();
+    });
+    $('.name-field').on('keyup', function(){
+      $('#applicant-name').val($('#applicant-given-name').val() + ' ' + $('#applicant-surname').val());
+    });
+    </script>
+  </body>
+</html>
