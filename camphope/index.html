@@ -9,14 +9,25 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <style>
     body {
+      background-color: #303030;
+    }
+    .container {
       background-color: whitesmoke;
+      padding-bottom: 1em;
+    }
+    #logo {
+      width: 15%;
+      margin: 0 auto;
     }
     </style>
     <title>Application</title>
   </head>
   <body>
     <div class="container">
-      <h1>Application</h1>
+      <div class="text-center" id="logo">
+        <image src="ptsd_shield.png" class="img-fluid" />
+      </div>
+      <h1>Application for Residency</h1>
       <form>
         <input type="hidden" id="applicant-name">
         <input type="hidden" id="app-date">
@@ -353,7 +364,7 @@
         },
         landingId: "921c136a-dcdc-493d-8ddc-2131d56d4156",
         serviceUrl: "https://camphope.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-        redirectUrl: "https://stalwartmc.com/camphope/success.html"
+        redirectUrl: "http://stalwartmc.com/camphope/success.html"
     };
     /**
     * The function below creates a object from the submitted data.
