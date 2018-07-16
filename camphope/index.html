@@ -31,6 +31,8 @@
       <form>
         <input type="hidden" id="applicant-name">
         <input type="hidden" id="app-date">
+        <input type="hidden" id="contact-type">
+        <input type="hidden" id="intake-stage">
 
         <div class="form-row">
           <div class="form-group col-md-4">
@@ -104,9 +106,13 @@
               <option>other</option>
             </select>
           </div>
-          <div class="form-group col-md-9">
+          <div class="form-group col-md-7">
             <label for="UsrReferralOtherExplanation">If "other", please explain</label>
             <input type="text" class="form-control" id="UsrReferralOtherExplanation">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="date-available">Date Available</label>
+            <input type="date" class="form-control date-field" id="date-available">
           </div>
         </div>
 
@@ -160,26 +166,26 @@
         <div class="form-row">
           <div class="form-group col-md-3">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="true" id="UsrArmyActive">
+              <input class="form-check-input" type="checkbox" value="false" id="UsrArmyActive">
               <label class="form-check-label" for="UsrArmyActive">
                 Army Active
               </label>
             </div>
           </div>
           <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="true" id="UsrArmyReserve">
+            <input class="form-check-input" type="checkbox" value="false" id="UsrArmyReserve">
             <label class="form-check-label" for="UsrArmyReserve">
               Army Reserve
             </label>
           </div>
           <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="true" id="UsrNavyActive">
+            <input class="form-check-input" type="checkbox" value="false" id="UsrNavyActive">
             <label class="form-check-label" for="UsrNavyActive">
               Navy Active
             </label>
           </div>
           <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="true" id="UsrNavyReserve">
+            <input class="form-check-input" type="checkbox" value="false" id="UsrNavyReserve">
             <label class="form-check-label" for="UsrNavyReserve">
               Navy Reserve
             </label>
@@ -189,26 +195,26 @@
         <div class="form-row">
           <div class="form-group col-md-3">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="true" id="UsrUSAFActive">
+              <input class="form-check-input" type="checkbox" value="false" id="UsrUSAFActive">
               <label class="form-check-label" for="UsrUSAFActive">
                 USAF Active
               </label>
             </div>
           </div>
           <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="true" id="UsrUSAFReserve">
+            <input class="form-check-input" type="checkbox" value="false" id="UsrUSAFReserve">
             <label class="form-check-label" for="UsrUSAFReserve">
               USAF Reserve
             </label>
           </div>
           <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="true" id="UsrUSMCActive">
+            <input class="form-check-input" type="checkbox" value="false" id="UsrUSMCActive">
             <label class="form-check-label" for="UsrUSMCActive">
               USMC Active
             </label>
           </div>
           <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="true" id="UsrUSMCReserve">
+            <input class="form-check-input" type="checkbox" value="false" id="UsrUSMCReserve">
             <label class="form-check-label" for="UsrUSMCReserve">
               USMC Reserve
             </label>
@@ -218,26 +224,26 @@
         <div class="form-row">
           <div class="form-group col-md-3">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="true" id="UsrArmyNG">
+              <input class="form-check-input" type="checkbox" value="false" id="UsrArmyNG">
               <label class="form-check-label" for="UsrArmyNG">
                 Army National Guard
               </label>
             </div>
           </div>
           <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="true" id="UsrAirNatlGuard">
+            <input class="form-check-input" type="checkbox" value="false" id="UsrAirNatlGuard">
             <label class="form-check-label" for="UsrAirNatlGuard">
               Air National Guard
             </label>
           </div>
           <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="true" id="UsrCoastGuard">
+            <input class="form-check-input" type="checkbox" value="false" id="UsrCoastGuard">
             <label class="form-check-label" for="UsrCoastGuard">
               Coast Guard
             </label>
           </div>
           <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="true" id="UsrCoastGuardReserve">
+            <input class="form-check-input" type="checkbox" value="false" id="UsrCoastGuardReserve">
             <label class="form-check-label" for="UsrCoastGuardReserve">
               Coast Guard Reserve
             </label>
@@ -247,7 +253,7 @@
         <div class="form-row">
           <div class="form-group col-md-3">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="true" id="UsrContractorService">
+              <input class="form-check-input" type="checkbox" value="false" id="UsrContractorService">
               <label class="form-check-label" for="UsrContractorService">
                 Contractor Service
               </label>
@@ -357,14 +363,16 @@
             "UsrEmergencyState": "#UsrEmergencyState",
             "UsrEmergencyZip": "#UsrEmergencyZip",
             "UsrAppDate": "#app-date",
-            "UsrSSN": "#ssn",
+            "UsrSocialSecurityNumber": "#ssn",
             "BirthDate": "#birth-date",
             "HomePhone": "#home-phone",
-
+            "Type": "#contact-type",
+            "UsrIntakeStage": "#intake-stage",
+            "UsrDateAvailable": "#date-available"
         },
-        landingId: "921c136a-dcdc-493d-8ddc-2131d56d4156",
+        landingId: "f66dcef3-6c2e-4e33-b76e-81841595a9d2",
         serviceUrl: "https://camphope.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-        redirectUrl: "http://stalwartmc.com/camphope/success.html"
+        redirectUrl: "success.html"
     };
     /**
     * The function below creates a object from the submitted data.
@@ -380,13 +388,15 @@
     function initLanding() {
         landing.initLanding(config)
         document.getElementById('app-date').value = new Date().toISOString();
+        document.getElementById('contact-type').value = 'Applicant';
+        document.getElementById('intake-stage').value = 'Initiate Intake Assessment';
     }
     jQuery(document).ready(initLanding)
     $('button').on('click', function() {
       createObject();
     });
     $('.name-field').on('keyup', function(){
-      $('#applicant-name').val($('#applicant-given-name').val() + ' ' + $('#applicant-surname').val());
+      $('#applicant-name').val($('#applicant-given-name').val() + ' ' + $('#applicant-middle-name').val() + ' ' + $('#applicant-surname').val());
     });
     </script>
   </body>
