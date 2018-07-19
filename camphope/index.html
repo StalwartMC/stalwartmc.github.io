@@ -19,6 +19,28 @@
       width: 15%;
       margin: 0 auto;
     }
+    :invalid {
+      border-color: red;
+    }
+    #spinner {
+      position: fixed;
+      z-index: 1000;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+    #spinner h3 {
+      border: 1px solid #ccc;
+      background-color: white;
+      position: fixed;
+      left: 33%;
+      width: 33%;
+      top: 3em;
+      padding: 5em;
+    }
     </style>
     <title>PTSD Foundation of America - Intake Assessment</title>
   </head>
@@ -28,7 +50,7 @@
         <image src="ptsd_shield.png" class="img-fluid" />
       </div>
       <h1>Intake Assessment</h1>
-      <form>
+      <form onsubmit="createObject(); return false;">
         <input type="hidden" id="applicant-name">
         <input type="hidden" id="app-date">
         <input type="hidden" id="contact-type">
@@ -56,7 +78,7 @@
           </div>
           <div class="form-group col-md-3">
             <label for="ssn">Social Security Number</label>
-            <input type="number" class="form-control" id="ssn">
+            <input type="text" class="form-control" id="ssn" pattern="[\d\-]*" minlength="9" maxlength="11">
           </div>
           <div class="form-group col-md-3">
             <label for="birth-date">Birthdate</label>
@@ -144,7 +166,7 @@
         <div class="form-row">
           <div class="form-group col-md-4">
             <label for="UsrTotalNoDeployments">Total Number of Deployments</label>
-            <input type="number" class="form-control" id="UsrTotalNoDeployments">
+            <input type="number" class="form-control" id="UsrTotalNoDeployments" min="0">
           </div>
           <div class="form-group col-md-8">
             <label for="UsrDischargeType">Discharge Type</label>
@@ -300,14 +322,17 @@
           </div>
           <div class="form-group col-md-4">
             <label for="UsrEmergencyZip">Zip</label>
-            <input type="number" class="form-control" id="UsrEmergencyZip">
+            <input type="number" class="form-control" id="UsrEmergencyZip" min="10000" max="99999">
           </div>
         </div>
 
 
-
+        <input type="Submit" class="btn btn-primary">
       </form>
-      <button class="btn btn-primary">Submit</button>
+
+    </div>
+    <div id="spinner">
+      <h3 class="text-center">Submitting your information for review.</h3>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -380,6 +405,8 @@
     * Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
     */
     function createObject() {
+        $('button').disabled = true;
+        $('#spinner').show();
         landing.createObjectFromLanding(config)
     }
     /**
@@ -393,7 +420,7 @@
     }
     jQuery(document).ready(initLanding)
     $('button').on('click', function() {
-      createObject();
+      //createObject();
     });
     $('.name-field').on('keyup', function(){
       $('#applicant-name').val($('#applicant-given-name').val() + ' ' + $('#applicant-middle-name').val() + ' ' + $('#applicant-surname').val());
