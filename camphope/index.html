@@ -57,11 +57,11 @@
         <input type="hidden" id="intake-stage">
 
         <div class="form-row">
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-3">
             <label for="applicant-given-name">First Name</label>
             <input type="text" class="form-control name-field" id="applicant-given-name">
           </div>
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-3">
             <label for="applicant-middle-name">Middle Name</label>
             <input type="text" class="form-control" id="applicant-middle-name">
           </div>
@@ -83,6 +83,13 @@
           <div class="form-group col-md-3">
             <label for="birth-date">Birthdate</label>
             <input type="date" class="form-control date-field" id="birth-date">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="Gender">Gender</label>
+            <select class="form-control" id="Gender">
+              <option>Male</option>
+              <option>Female</option>
+            </select>
           </div>
         </div>
 
@@ -133,7 +140,7 @@
             <input type="text" class="form-control" id="UsrReferralOtherExplanation">
           </div>
           <div class="form-group col-md-2">
-            <label for="date-available">Date Available</label>
+            <label for="date-available">Available Entry Date</label>
             <input type="date" class="form-control date-field" id="date-available">
           </div>
         </div>
@@ -393,7 +400,8 @@
             "HomePhone": "#home-phone",
             "Type": "#contact-type",
             "UsrIntakeStage": "#intake-stage",
-            "UsrDateAvailable": "#date-available"
+            "UsrDateAvailable": "#date-available",
+            "Gender": "#Gender"
         },
         landingId: "f66dcef3-6c2e-4e33-b76e-81841595a9d2",
         serviceUrl: "https://camphope.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
