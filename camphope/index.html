@@ -1592,12 +1592,11 @@
         serviceUrl: "https://camphope.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
         redirectUrl: "success.html"
     };
-    $('.form-control').each(function(idx, ctrl){console.log(ctrl);
+    $('.form-control').each(function(idx, ctrl){
       if (ctrl.id.substring(0,3) == 'Usr') {
         config.fields[ctrl.id] = '#' + ctrl.id;
       }
     });
-    console.log(config);
     /**
     * The function below creates a object from the submitted data.
     * Bind this function call to the "onSubmit" event of the form or any other elements events.
