@@ -64,7 +64,7 @@
           <div class="form-row">
             <div class="form-group col-md-3">
               <label for="applicant-given-name">First Name</label>
-              <input type="text" class="form-control name-field" id="applicant-given-name">
+              <input type="text" class="form-control name-field" id="applicant-given-name" required>
             </div>
             <div class="form-group col-md-3">
               <label for="applicant-middle-name">Middle Name</label>
@@ -72,7 +72,7 @@
             </div>
             <div class="form-group col-md-4">
               <label for="applicant-surname">Last Name</label>
-              <input type="text" class="form-control name-field" id="applicant-surname">
+              <input type="text" class="form-control name-field" id="applicant-surname" required>
             </div>
             <div class="form-group col-md-2">
               <label for="Gender">Gender</label>
@@ -1592,7 +1592,13 @@
         serviceUrl: "https://camphope.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
         redirectUrl: "success.html"
     };
-    $('.form-control').each(function(idx, ctrl){
+    $('input').each(function(idx, ctrl){
+      if (ctrl.id.substring(0,3) == 'Usr') {
+        config.fields[ctrl.id] = '#' + ctrl.id;
+      }
+    });
+
+    $('select').each(function(idx, ctrl){
       if (ctrl.id.substring(0,3) == 'Usr') {
         config.fields[ctrl.id] = '#' + ctrl.id;
       }
@@ -1605,7 +1611,7 @@
     function createObject() {
         $('#submit-btn').disabled = true;
         $('#spinner').show();
-        landing.createObjectFromLanding(config)
+        landing.createObjectFromLanding(config);
     }
     /**
     * The function below inits landing page using URL parameters.
