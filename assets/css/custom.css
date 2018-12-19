@@ -6,11 +6,12 @@
 }
 .intro-content .big-h1{
 	text-indent: -99999px;
-	background-image: url(../images/stalwartmc-logo.png);
+	background-image: url(../images/SMC_Stacked.png);
 	background-position: top center;
 	background-repeat: no-repeat;
 	width:100%;
-	height:112px;
+	background-size: contain;
+	height:110px;
 	display:block;
 }
 
