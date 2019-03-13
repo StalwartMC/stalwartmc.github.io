@@ -13,7 +13,8 @@ StalwartMC ignites innovation in organizations ranging from non-profits to emerg
 Founded in 2016, StalwartMC takes pride in hiring great people who embody our Core Values and like to have fun. Our colleagues find both inspiration and great energy by working with other talented individuals who share their passion for helping others succeed.
 
 ## REASONS CLIENTS CHOOSE US
-| Tables   |      Are      |  Cool |
+
+|![125x125.jpg](/uploads/125x125.jpg)|![125x125.jpg](/uploads/125x125.jpg)|![125x125.jpg](/uploads/125x125.jpg)|![125x125.jpg](/uploads/125x125.jpg)|
 |:--------:|:-------------:|:-----:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
+|**B2B Focus**|**Broad Industry Experience**|**Action-Oriented Methodologies**|**Agile Teams**|
+|Laser focus and deep practice in the business-to-business arena to tackle complex, multi-stakeholder environments|Broad experience that brings a fresh perspective and practical ideas from other industries and markets|Methodologies that thoroughly address all key aspects of a business challenge/opportunity and lead to actionable results|Teams that can ramp up quickly and get you to decisions faster|
