@@ -1,0 +1,25 @@
+.nav-container {
+  background: #2e383d;
+}
+.nav-container nav {
+  background: linear-gradient(to top, black, 10%, #2e383d);
+}
+
+.social-icons {
+  height: 2em;
+  display: inline;
+}
+
+nav img {
+  width: auto;
+  max-height: 100%;
+}
+
+nav a {
+  color: #fffff8;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #fffff8;
+}

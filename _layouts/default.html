@@ -1,0 +1,84 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@StalwartMC" />
+    <meta name="twitter:image" content="http://www.stalwartmc.com/assets/images/SMC_Stacked.png" />
+    <meta property="og:url"           content="http://www.stalwartmc.com{{ page.url }}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="StalwartMC" />
+    <meta property="og:description"   content="Founded on the basis of helping others achieve more" />
+    <meta property="og:image"         content="http://www.stalwartmc.com/assets/images/SMC_Stacked.png" />
+    <meta property="og:image:width"   content="659" />
+    <meta property="og:image:height"  content="439" />
+    <title>StalwartMC - {{ page.title }}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+  </head>
+  <body>
+    {% include header.html %}
+    {% include nav.html %}
+    {% if page.jumbotron_image %}
+    <div class="jumbotron p-4 p-md-5 text-white">
+      <img src="{{ page.jumbotron_image }}" class="img-fluid" />
+    </div>
+    {% endif %}
+
+    <main class="container">
+      <h1>{{ page.title }}</h1>
+      {{ content }}
+
+      {% unless page.id %}
+      <section id="post-list">
+        <h3>Latest Posts</h3>
+        {% for post in site.posts %}
+          {% unless post.url == page.url %}
+          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+          <p>{{ post.excerpt}}</p>
+          {% endunless %}
+        {% endfor %}
+        </ul>
+      </section>
+      {% endunless %}
+
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <h5>Contact us!</h5>
+          <form role="form" id="contactForm" data-toggle="validator" class="shake" action="http://formspree.io/barmenta@stalwartmc.com">
+            <input type="text" style="display: none;" name="gotcha" />
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter name" required data-error="NEW ERROR MESSAGE">
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <button type="submit" id="form-submit" class="btn btn-secondary">Submit</button>
+            <div id="msgSubmit" class="h3 text-center hidden"></div>
+            <div class="clearfix"></div>
+          </form>
+        </div>
+      </div>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

@@ -1,0 +1,29 @@
+header {
+  color: #fffff8;
+  background-color: #2e383d;/*rgba(46, 56, 61, 100);*/
+}
+
+header a:hover {
+  text-decoration: none;
+}
+
+address {
+  font-size: 0.8em;
+  margin-bottom: 0px;
+}
+
+#stalwart-logo {
+  background-color: #fff;
+  display: inline-block;
+  height: 60px;
+  padding: 3px;
+}
+
+#stalwart-logo img {
+  width: auto;
+  max-height: 100%;
+}
+
+#stalwart-name {
+  font-size: 3em;
+}
