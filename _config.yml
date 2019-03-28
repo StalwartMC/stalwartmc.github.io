@@ -8,3 +8,10 @@ collections:
   uploads:
     title: Uploads
     output: true
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      menu: false
