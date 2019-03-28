@@ -1,6 +1,7 @@
 ---
 title: Delivering Big Firm Consulting in a Small Firm Way
 date: 2019-03-12 12:31:00 Z
+menu: true
 jumbotron_image: "/uploads/800x400.jpg"
 ---
 
