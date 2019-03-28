@@ -4,6 +4,10 @@
   border-radius: 0;
 }
 
+main {
+  margin-top: 2em;
+}
+
 main h2 {
   text-align: center;
   margin-top: 1em;
@@ -12,5 +16,9 @@ main h2 {
 #post-list {
   background: beige;
   padding: 8px 16px;
-  margin-top: 1em;
+  margin-top: 3em;
+}
+
+#contact-form-box {
+  margin: 1em 0 1em 0;
 }

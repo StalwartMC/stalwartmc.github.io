@@ -1,11 +1,11 @@
 <div class="container-fluid nav-container py-1">
   <nav class="nav d-flex justify-content-between container">
-    <a class="p-2" href="/">Home</a>
-    <a class="p-2" href="#aboutus">About Us</a>
-    <a class="p-2" href="#services">Services</a>
-    <a class="p-2" href="#industries">Industries</a>
-    <a class="p-2" href="#clients">Clients</a>
-    <a class="p-2" href="#contactus">Contact Us</a>
+    <a class="p-2" href="/example.html">Home</a>
+    {% for p in site.pages %}
+      {% if p.menu %}
+      <a class="p-2" href="{{ p.url }}">{{ p.title }}</a>
+      {% endif %}
+    {% endfor %}
     <span class="social-icons">
       <a href="https://facebook.com/StawartMC"><img src="/assets/images/facebook-circle.png" alt="Facebook" /></a>
       <a href="https://twitter.com/StalwartMC"><img src="/assets/images/twitter-circle.png" alt="Twitter" /></a>
