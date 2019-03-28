@@ -8,10 +8,3 @@ collections:
   uploads:
     title: Uploads
     output: true
-Navigation:
-  Home: "/"
-  About Us: aboutus.markdown
-  Services: services.markdown
-  Industries: industries.markdown
-  Clients: clients.markdown
-  Contact Us: contactus.markdown
